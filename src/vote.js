@@ -47,7 +47,7 @@ var abi = [
     },
 ];
 
-var web3 = new Web3(window.web3.currentProvider);
+var web3 = new Web3(window.ethereum);
 var contract = new web3.eth.Contract(abi, address);
 
 export const getVotes = (candidate) => {

@@ -23,6 +23,7 @@ function VotingForm(props) {
     const [stats, setStats] = React.useState(chartConfig);
 
     useEffect(() => {
+        window.ethereum.enable();
         const callAPI = async () => {
             setLoading(true);
             chartConfig.series[0].data = [];
